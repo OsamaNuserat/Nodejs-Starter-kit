@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const connectDB = async () => {
   return await mongoose
-    .connect("mongodb+srv://osama:Os191020013@cluster0.t10quvk.mongodb.net/node3")
+    .connect(process.env.DB_LOCAL)
     .then((result) => {
       console.log("connected");
     })

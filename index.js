@@ -1,8 +1,9 @@
-import express from 'express'
-import initApp from './src/app.router.js';
-const app = express()
-const port = 3000
-initApp(app,express);
+import express from "express";
+import dotenv from "dotenv";
+import initApp from "./src/app.router.js";
+dotenv.config();
+const app = express();
+const port = 3000;
+initApp(app, express);
 
-
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(port, () => console.log(`Example app listening on port ${port}!`));
